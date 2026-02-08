@@ -1,16 +1,17 @@
 #include<iostream>
 using namespace std;
-int hh(int n){
+void hh(int n) {
     int i, sum=0;
-    for(i=1; i<=n; i++){
+    for(i=0; i<=n ;i++){
         sum=sum+i;
     }
-    return sum;
+    cout<<"sum of first "<< n <<" natural numbers: "<<sum <<endl;
+
 }
 int main() {
     int N;
     cout<<"Enter a number: ";
     cin>>N;
-    cout<<" sum of first "<< N <<" natural number : "<<hh(N)<<endl;
+    hh(N);
     return 0;
 }
