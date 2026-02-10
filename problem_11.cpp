@@ -1,16 +1,22 @@
 #include<iostream>
 using namespace std;
 int hh(int n){
-    int i, sum=0;
-    for(i=1; i<=n; i++){
-        sum=sum+i;
+    if((n%400==0)||(n%4==0)&&(n%100!=0)){
+        return true;
     }
-    return sum;
+    else{
+        return false;
+    }
 }
-int main() {
+int main(){
     int N;
-    cout<<"Enter a number: ";
+    cout<<"Enter a numbers: ";
     cin>>N;
-    cout<<" sum of first "<< N <<" natural number : "<<hh(N)<<endl;
+    if(hh(N)){
+        cout<<" "<<N<<" this year is leap year.";
+    }
+    else{
+        cout<<" "<<N<<" this year is not a leap year.";
+    }
     return 0;
 }
