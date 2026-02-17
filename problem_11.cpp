@@ -1,22 +1,17 @@
 #include<iostream>
 using namespace std;
-int hh(int n){
-    if((n%400==0)||(n%4==0)&&(n%100!=0)){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
 int main(){
-    int N;
-    cout<<"Enter a numbers: ";
-    cin>>N;
-    if(hh(N)){
-        cout<<" "<<N<<" this year is leap year.";
+    int num1, num2, num3;
+    cout<<"Enter three numbers: ";
+    cin>>num1>>num2>>num3;
+    if((num1>num2) || (num1>num3)){
+        cout<<" "<<num1<<" is a largest number."<<endl;
     }
-    else{
-        cout<<" "<<N<<" this year is not a leap year.";
+    else if((num2>num1)||(num2>num3)){
+        cout<<" "<<num2<<" is a largest number."<<endl;
+    }
+    else {
+        cout<<" "<<num3<<" is a largest number."<<endl;
     }
     return 0;
 }
